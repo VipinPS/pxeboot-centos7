@@ -1,0 +1,15 @@
+default menu.c32
+prompt 0
+timeout 300
+ONTIMEOUT local
+
+menu title ########## PXE Boot Menu ##########
+
+label 1
+menu label ^1) Install CentOS 7 Edition
+kernel centos7/images/pxeboot/vmlinuz
+#append initrd=centos7/images/pxeboot/initrd.img method=http://10.0.0.3/centos7 devfs=nomount
+append initrd=centos7/images/pxeboot/initrd.img inst.ks=http://10.0.0.3/installer/anaconda-ks.cfg
+
+label 2
+menu label ^2) Boot from local drive localboot
