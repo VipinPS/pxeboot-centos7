@@ -1,7 +1,7 @@
 # pxeboot-centos7
 
 # Installing Packages #
-yum install net-utils httpd vsftpd xinetd syslinux tftp-server dhcp*
+```yum install net-utils httpd vsftpd xinetd syslinux tftp-server dhcp*```
 
 # Setting up software packages and directories #
 mount -o loop  /dev/cdrom /var/lib/tftpboot/centos7
